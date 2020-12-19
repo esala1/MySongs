@@ -1,74 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySongs</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
-    <div class="column">
-        <h1 id="title">My music recordings</h1>
-        <div id="player" class="col-lg">          
-            <h3>(favorite song #1) Listen cover</h3>
-            <div class="imgBx">
-                <img src="media/listen.jpg" alt="" class="img-fluid">
-            </div>
-            <audio controls>
-                <source src="media/listen.mp3" type = "audio/mp3">
-            </audio>
-        </div>
-        <br>
-        <div id="player" class="col-lg">
-            <h3>(favorite song #2) I have nothing cover</h3>
-            <div class="imgBx">
-                <img src="media/whitneyH1.jpg" alt="" class="img-fluid">
-            </div>
-            <audio controls>
-                <source src="media/I have nothing.mp3" type = "audio/mp3">
-            </audio>
-        </div>
-        <br>
-        <br>
-        <div id="player" class="col-lg">
-            <h3>(Demo) Imagine cover</h3>
-            <div class="imgBx">
-                <img src="media/imagi.png" alt="" class="img-fluid">
-            </div>
-            <audio controls>
-                <source src="media/imagine.mp3" type = "audio/mp3">
-            </audio>
-        </div>
-        <br>
-        <div id="player" class="col-lg">
-            <h3>(Demo) Hurt cover</h3>
-            <div class="imgBx">
-                <img src="media/johhny cash (hurt).png" alt="" class="img-fluid">
-            </div>
-            <audio controls>
-                <source src="media/Hurt cover(demo).mp3" type = "audio/mp3">
-            </audio>
-        </div>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <br>
-        <div class="col-lg" div id="player">
-            <h3>(Demo) Seven cover</h3>
-            <div class="imgBx">
-                <img src="media/7-Years-by-Lukas-Graham.jpg" alt="" class="img-fluid">
-            </div>
-            <audio controls>
-                <source src="media/Seven cover(demo).mp3" type = "audio/mp3">
-            </audio>
-        </div>
-      <br>
-       
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- APlayer CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+<link rel="stylesheet" href="style.css">
+    <title>My Hobby : Singing</title>
+ 	</head>
+	<body>
+
+<div class="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>My music recordings</h1>
+			</div>
+			<div class="col-md-4">
+				<a href="javascript:void();" class="album-poster" data-switch="0">
+					<img src="source/listen.jpg">
+				</a>
+				<h4>My favorite song #1: Listen Cover</h4>
+				<p>auto-tuned</p>
+			</div>
+			<div class="col-md-4">
+				<a href="#" class="album-poster" data-switch="1">
+					<img src="source/whitneyH1.jpg">
+				</a>
+				<h4>My favorite song #2: I have nothing Cover</h4>
+				<p>auto-tuned</p>
+			</div>
+			<div class="col-md-4">
+				<a href="#" class="album-poster" data-switch="2">
+					<img src="source/imagi.png">
+				</a>
+				<h4>My favorite song #3: Imagine Cover</h4>
+				<p>No autotune singing voice</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+			</div>
+			<div class="col-md-4">
+				<a href="#" class="album-poster" data-switch="3">
+					<img src="source/johhny cash (hurt).png">
+				</a>
+				<h4>(Demo) Hurt Cover</h4>
+				<p>No autotune singing voice</p>
+			</div>
+			<div class="col-md-4">
+				<a href="#" class="album-poster" data-switch="4">
+					<img src="source/7-Years-by-Lukas-Graham.jpg">
+				</a>
+				<h4>(Demo) 7 Years Cover</h4>
+				<p>No autotune singing voice</p>
+			</div>			
+		</div>
+	</div>
 </div>
 
+	<div id="aplayer"></div>
 
-</div>
+	<!-- Jquery Link -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<!-- Bootstrap Link -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!-- APlayer Jquery link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>	
+	<script>
+		// NOW I CLICK album-poster TO GET CURRENT SONG ID
+		$(".album-poster").on('click', function(e){
+			var dataSwitchId = $(this).attr('data-switch');
+			//console.log(dataSwitchId);
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+			// and now i use aplayer switch function see
+			ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
 
-</body>
+			// aplayer play function
+			// when i click any song to play
+			ap.play();
+
+			// click to slideUp player see
+			$("#aplayer").addClass('showPlayer');
+		});
+
+		const ap = new APlayer({
+		    container: document.getElementById('aplayer'),
+		    listFolded: true,
+		    audio: [
+		    {
+		        name: 'Listen Cover',
+		        artist: 'Beyonce',
+		        url: 'source/listen.mp3',
+		        cover: 'source/listen.jpg'
+		    },
+			{
+		        name: 'I have nothing Cover',  
+		        artist: 'Whitney Houston', 
+		        url: 'source/I have nothing.mp3', 
+		        cover: 'source/whitneyH1.jpg' 
+		    },
+			{
+				name: 'Imagine Cover',
+				artist: 'John Lennon',
+				url: 'source/imagine.mp3',
+				cover: 'source/imagi.png',
+			},
+			{
+				name: 'Hurt Cover',
+				artist: 'Johnny Cash',
+				url: 'source/Hurt cover(demo).mp3',
+				cover: 'source/johhny cash (hurt).png',
+			},
+			{
+				name: '7 years Cover',
+				artist: 'Lukas Graham',
+				url: 'source/Seven cover(demo).mp3',
+				cover: 'source/7-Years-by-Lukas-Graham.jpg',
+			},
+
+		    ]
+		});
+	</script>
+	</body>
 </html>
