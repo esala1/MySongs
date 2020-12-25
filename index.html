@@ -22,50 +22,57 @@
 			</div>
 			<div class="col-md-3">
 				<a href="javascript:void();" class="album-poster" data-switch="0">
-					<img src="source/listen.jpg">
+					<img src="source/hero.jpg">
 				</a>
-				<h4>My favorite song #1: Listen Cover</h4>
-				<p>auto-tuned</p>
+				<h4>My favorite song #1: Hero Cover</h4>
+				<p>full cover</p>
 			</div>
 			<div class="col-md-3">
 				<a href="#" class="album-poster" data-switch="1">
-					<img src="source/whitneyH1.jpg">
+					<img src="source/listen.jpg">
 				</a>
-				<h4>My favorite song #2: I have nothing Cover</h4>
-				<p>auto-tuned</p>
+				<h4>My favorite song #2: Listen Cover</h4>
+				<p>full cover</p>
 			</div>
 			<div class="col-md-3">
 				<a href="#" class="album-poster" data-switch="2">
-					<img src="source/imagi.png">
+					<img src="source/whitneyH1.jpg">
 				</a>
-				<h4>My favorite song #3: Imagine Cover</h4>
-				<p>No autotune singing voice</p>
+				<h4>My favorite song #3: I have nothing Cover</h4>
+				<p>full cover</p>
 			</div>
 			<div class="col-md-3">
 				<a href="#" class="album-poster" data-switch="3">
 					<img src="source/Journey.png">
 				</a>
 				<h4> Don't Stop believin Cover</h4>
-				<p>auto-tuned</p>
+				<p>full cover</p>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<a href="#" class="album-poster" data-switch="4">
+					<img src="source/imagi.png">
+				</a>
+				<h4>(Demo) Imagine Cover</h4>
+				<p>Demo (real voice - no autotune)</p>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="5">
 					<img src="source/johhny cash (hurt).png">
 				</a>
 				<h4>(Demo) Hurt Cover</h4>
-				<p>No autotune singing voice</p>
+				<p>Demo (real voice - no autotune)</p>
 			</div>
-			<div class="col-md-4">
-				<a href="#" class="album-poster" data-switch="5">
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="6">
 					<img src="source/7-Years-by-Lukas-Graham.jpg">
 				</a>
 				<h4>(Demo) 7 Years Cover</h4>
-				<p>No autotune singing voice</p>
+				<p>Demo</p>
 			</div>			
 		</div>
 	</div>
@@ -100,6 +107,12 @@
 		    container: document.getElementById('aplayer'),
 		    listFolded: true,
 		    audio: [
+			{
+		        name: 'Hero Cover',
+		        artist: 'Mariah Carey',
+		        url: 'source/hero.mp3',
+		        cover: 'source/hero.jpg'
+		    },
 		    {
 		        name: 'Listen Cover',
 		        artist: 'Beyonce',
@@ -113,16 +126,16 @@
 		        cover: 'source/whitneyH1.jpg' 
 		    },
 			{
-				name: 'Imagine Cover',
-				artist: 'John Lennon',
-				url: 'source/imagine.mp3',
-				cover: 'source/imagi.png',
-			},
-			{
 				name: 'Don\'t stop believin Cover',
 				artist: 'Journey',
 				url: 'source/dont s.mp3',
 				cover: 'source/Journey.png',
+			},
+			{
+				name: 'Imagine Cover',
+				artist: 'John Lennon',
+				url: 'source/imagine.mp3',
+				cover: 'source/imagi.png',
 			},
 			{
 				name: 'Hurt Cover',
