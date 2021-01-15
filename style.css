@@ -84,3 +84,11 @@ span{
 .aplayer .aplayer-info .aplayer-music{
     margin-bottom: 5px;
 }
+.DaNation{
+    border-radius: 70%;
+    box-shadow:  5px 10px #888888;
+}
+.DaNation:hover{
+    border-radius: 50%;
+    box-shadow:  20px 40px #2cd6b1;
+}
